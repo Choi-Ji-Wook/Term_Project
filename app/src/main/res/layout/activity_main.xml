@@ -15,6 +15,5 @@
         android:text="모두 보기"
         android:id="@+id/box"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
