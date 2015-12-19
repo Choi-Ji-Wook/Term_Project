@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="13"
+    android:columnCount="4">
+
+    <TextView
+        android:layout_width="291dp"
+        android:layout_height="57dp"
+        android:text="날짜 선택을 눌러주세요"
+        android:id="@+id/tv_date"
+        android:layout_column="0"
+        android:gravity="center_horizontal"
+        android:textSize="28dp"
+        android:layout_columnSpan="3"
+        android:layout_row="1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 선택"
+        android:id="@+id/date"
+        android:layout_gravity="right"
+        android:layout_column="1"
+        android:layout_row="1"
+        android:layout_alignBottom="@+id/tv_date"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:text="식사"
+        android:id="@+id/bt_meal"
+        android:layout_column="0"
+        android:singleLine="false"
+        android:layout_row="3"
+        android:layout_below="@+id/tv_date" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:text="데이트"
+        android:id="@+id/bt_love"
+        android:layout_column="0"
+        android:layout_row="4"
+        android:layout_below="@+id/bt_meal"
+        android:layout_alignLeft="@+id/bt_meal"
+        android:layout_alignStart="@+id/bt_meal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:text="친구"
+        android:id="@+id/bt_friend"
+        android:layout_column="0"
+        android:layout_row="5"
+        android:layout_below="@+id/bt_study"
+        android:layout_toRightOf="@+id/bt_meal"
+        android:layout_toEndOf="@+id/bt_meal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:text="공부"
+        android:id="@+id/bt_study"
+        android:layout_column="0"
+        android:layout_row="6"
+        android:layout_below="@+id/tv_date"
+        android:layout_toRightOf="@+id/bt_meal"
+        android:layout_toEndOf="@+id/bt_meal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:text="기타"
+        android:id="@+id/bt_extra"
+        android:layout_column="0"
+        android:layout_row="7"
+        android:layout_below="@+id/bt_love"
+        android:layout_toRightOf="@+id/bt_love"
+        android:layout_toEndOf="@+id/bt_love" />
+
+    <EditText
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_detail"
+        android:layout_column="0"
+        android:text="세부 사항 입력"
+        android:gravity="center_horizontal"
+        android:layout_row="8"
+        android:layout_below="@+id/bt_extra" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:text="입력"
+        android:id="@+id/bt_insert"
+        android:layout_column="1"
+        android:layout_row="8"
+        android:layout_alignBottom="@+id/et_detail"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:id="@+id/bt_save"
+        android:layout_row="9"
+        android:layout_column="1"
+        android:layout_below="@+id/bt_insert"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:text="통계"
+        android:id="@+id/bt_array"
+        android:layout_column="1"
+        android:layout_row="10"
+        android:layout_below="@+id/bt_back"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:text="지도표시"
+        android:id="@+id/bt_back"
+        android:layout_row="11"
+        android:layout_column="1"
+        android:layout_below="@+id/bt_save"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view"
+        android:layout_below="@+id/bt_insert"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/bt_save"
+        android:layout_toStartOf="@+id/bt_save" />
+
+</RelativeLayout>
