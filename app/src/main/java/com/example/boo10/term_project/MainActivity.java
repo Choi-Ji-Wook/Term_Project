@@ -210,14 +210,21 @@ public class MainActivity extends AppCompatActivity {
 
         while (!results.isAfterLast()) {
             int id = results.getInt(0);
+            String year = results.getString(1);
+            String month = results.getString(2);
+            String date = results.getString(3);
             String name = results.getString(4);
+            String detail = results.getString(5);
             //Toast.makeText(this, "index= " + id + " name=" + name, Toast.LENGTH_LONG).show();
             Log.d("lab_sqlite", "index= " + id + " name=" + name);
 
+            nameList.add(year+ "년 " + month + "월 " +date + "일");
             nameList.add(name);
+            nameList.add(detail);
 
             results.moveToNext();
         }
+        results.close();
     }
 
 }

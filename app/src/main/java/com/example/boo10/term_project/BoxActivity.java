@@ -98,15 +98,15 @@ static final LatLng SEOUL = new LatLng(37.5174140, 127.093234);
                    //     get_Data.getStringExtra("Detail")).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)).title(get_Data.getStringExtra("What")));
 
                 insertData(lat, lng, get_Data.getStringExtra("What"), get_Data.getStringExtra("month"), get_Data.getStringExtra("date"));
-                //Cursor cursor = db.rawQuery("select * from " + tableName, null);
-                //cursor.moveToFirst();
-                LatLng data_Position;/*
+                Cursor cursor = db2.rawQuery("select * from " + tableName, null);
+                cursor.moveToFirst();
+                LatLng data_Position;
                 while(cursor.moveToNext()){
                     data_Position = new LatLng(cursor.getDouble(1), cursor.getDouble(2));
                     map.addMarker(new MarkerOptions().position(data_Position).snippet(cursor.getString(4)+ cursor.getString(5)).
                             icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)).title(cursor.getString(3)));
-                }*/
-                //cursor.close();
+                }
+                cursor.close();
             }
         });
     }
